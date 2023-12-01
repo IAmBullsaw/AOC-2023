@@ -14,7 +14,6 @@ def solve2(puzzle):
 def main():
 
     puzzle = list(fileinput.input())
-    # just a test
     # for line in fileinput.input():
     #     line
 
