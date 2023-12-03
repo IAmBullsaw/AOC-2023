@@ -1,12 +1,12 @@
 import fileinput
 
-example1 = """"""
+example1 = """""".split('\n')
 
 def solve1(puzzle):
     pass
 
 
-example2 = """"""
+example2 = """""".split('\n')
 
 def solve2(puzzle):
     pass
@@ -14,6 +14,8 @@ def solve2(puzzle):
 def main():
 
     puzzle = list(fileinput.input())
+    if not puzzle[-1].strip():
+        puzzle = puzzle[:-1]
 
     # for line in fileinput.input():
     #     line
