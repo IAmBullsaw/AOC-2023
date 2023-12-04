@@ -43,16 +43,15 @@ def solve2(puzzle):
         left = left.split()
         right = right.split()
 
-        for _ in range(m[cardId]): # once per card
-            num = 0
-            for x in left:
-                if x in right:
-                    num += 1
+        num = 0
+        for x in left:
+            if x in right:
+                num += 1
 
-            if num:
-                for copy in range(cardId+1,cardId+num+1):
-                    if copy <= num_cards:
-                        m[copy] += 1
+        if num:
+            for copy in range(cardId+1, cardId+num+1):
+                if copy <= num_cards:
+                    m[copy] += 1 * m[cardId]
     stot = 0
     for v in m.values():
         stot += v
